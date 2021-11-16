@@ -1,0 +1,58 @@
+<!-- <view class='home-page'>
+   <h4 class="navbar-relation">运动广场</h4>
+   <view class="iconfont icon-fanhui" style="font-size:36rpx;"></view>
+
+</view> -->
+<van-nav-bar title="运动广场">
+  <van-icon name="chat-o" size="24px" color="#33cb87" slot="left" dot bindtap="bindViewChat"></van-icon>
+</van-nav-bar>
+
+<view class="banner">
+  <button class="btn-rules" size="mini" bindtap="bindViewRules">规则</button>
+</view>
+
+<view class ="avatar-cont">
+    <view wx:for ='{{images}}' style="transform:translateX({{-index*48}}rpx)">
+       <image class="avatar-image" src='{{item}}' mode="aspectFill"></image>
+    </view>
+    <van-cell is-link>今日共<text>2680</text>人参与打卡</van-cell>
+</view>
+
+<view class="btn-cont">
+   <button type="primary" bindtap="bindViewTap">运动打卡</button>
+   <navigator url="/page/navigate/navigate?title=navigate" hover-class="navigator-hover">打卡补签  >></navigator>
+</view>
+
+<view class="h-title">
+  <view class="h-tit-icon"></view>
+  <text class="h-tit-l">运动打卡</text>
+  <text class="h-tit-s">(1w+)</text>
+</view>
+
+
+<view class="item-box">
+    <view class="item-top">
+      <image class="avatar-image" src="https://img.yzcdn.cn/vant/cat.jpeg" mode="cover"></image>
+      <text class="avatar-nickname">{{nickName}}</text>
+      <text class="item-time">2021.10.10 22:00</text>
+    </view>
+    <view class="item-cont">
+          <view class="item-mid-txt">运动类型：<text>跑步</text></view>
+          <view class="item-mid-txt">运动时长：<text>2小时</text></view>
+          <view class="item-mid-txt">预估消耗卡路里：<text>960千焦</text></view>
+          <view class="item-image">
+            <image src="https://img.yzcdn.cn/vant/sand.jpg" mode="aspectFill"></image>
+          </view>
+          <view class="item-bot">
+              <view class="item-bot-left"><text class="iconfont icon-jianshen"></text>连续<text class="font-num">2</text>天，累计<text class="font-num">6</text>天</view>
+              <view class="item-bot-right">鼓励<text class="iconfont icon-zan"></text><text class="font-num">6</text></view>
+          </view>
+          
+    </view>
+
+
+
+
+</view>
+
+
