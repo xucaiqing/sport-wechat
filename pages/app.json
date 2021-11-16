@@ -1,0 +1,73 @@
+{
+  "pages": [
+    "pages/login/login",
+    "pages/index/index",
+    "pages/calendar/calendar",
+    "pages/list/list",
+    "pages/my/my",
+    "pages/praiseRecord/praiseRecord",
+    "pages/sports/sports",
+    "pages/sportsType/sportsType",
+    "pages/logs/logs"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "运动打卡小程序",
+    "navigationBarTextStyle": "black",
+    "navigationStyle": "custom"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json",
+  "tabBar": {
+    "color": "#888",
+    "selectedColor": "#33cb87",
+    "borderStyle": "white",
+    "list": [
+      {
+        "selectedIconPath": "images/icon-index-active.png",
+        "iconPath": "images/icon-index.png",
+        "pagePath": "pages/index/index",
+        "text": "广场"
+      },
+      {
+        "selectedIconPath": "images/icon-calendar-active.png",
+        "iconPath": "images/icon-calendar.png",
+        "pagePath": "pages/calendar/calendar",
+        "text": "日历"
+      },
+      {
+        "selectedIconPath": "images/icon-list-active.png",
+        "iconPath": "images/icon-list.png",
+        "pagePath": "pages/list/list",
+        "text": "排行榜"
+      },
+      {
+        "selectedIconPath": "images/icon-mine-active.png",
+        "iconPath": "images/icon-mine.png",
+        "pagePath": "pages/my/my",
+        "text": "我的"
+      }
+    ]
+  },
+  "usingComponents": {
+    "van-button": "@vant/weapp/button/index",
+    "van-tabbar": "@vant/weapp/tabbar/index",
+    "van-tabbar-item": "@vant/weapp/tabbar-item/index",
+    "van-nav-bar": "@vant/weapp/nav-bar/index",
+    "van-icon": "@vant/weapp/icon/index",
+    "van-image": "@vant/weapp/image/index",
+    "van-cell": "@vant/weapp/cell/index",
+    "van-cell-group": "@vant/weapp/cell-group/index",
+    "van-skeleton": "@vant/weapp/skeleton/index",
+    "van-calendar": "@vant/weapp/calendar/index",
+    "van-tab": "@vant/weapp/tab/index",
+    "van-tabs": "@vant/weapp/tabs/index",
+    "van-field": "@vant/weapp/field/index",
+    "van-dropdown-menu": "@vant/weapp/dropdown-menu/index",
+    "van-dropdown-item": "@vant/weapp/dropdown-item/index",
+    "van-uploader": "@vant/weapp/uploader/index",
+    "van-radio": "@vant/weapp/radio/index",
+    "van-radio-group": "@vant/weapp/radio-group/index"
+  }
+}
