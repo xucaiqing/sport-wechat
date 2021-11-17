@@ -1,0 +1,56 @@
+
+.sports-form .van-field__label{
+  color:#888b9c;
+  font-size:30rpx;
+}
+.sports-form .van-field__body--text{
+  color:#525866;
+  font-size:30rpx;
+  padding-left:25%;
+}
+
+.sports-form .van-cell:after {
+  border:0;
+}
+
+.h-items{
+  display: flex;
+  padding:10rpx;
+  line-height:80rpx;
+  width:100%;
+ }
+ .h-items label{
+  color:#888b9c;
+  font-size:30rpx;
+  width:30%;
+ }
+ .h-items label text{
+   color:#f00;
+   padding:0 4rpx;
+ }
+ .text-first label{
+  padding-left:20rpx;
+ }
+ .text-first text{
+  padding-left:100rpx;
+ }
+
+ .h-items .van-dropdown-menu{
+  border:2rpx solid #f6f6f6;
+  box-shadow: none;
+  height:80rpx;
+  padding-left:100rpx;
+  padding-right:160rpx;
+}
+.upload{
+  padding:20rpx 30rpx;
+}
+.upload text{
+  color:#999;
+  display:block;
+  font-size:28rpx;
+  padding-bottom:20rpx;
+}
+.btn-cont{
+  padding-top:100rpx;
+}
