@@ -1,0 +1,54 @@
+
+<van-nav-bar title="个人中心">
+  <!-- <van-icon name="chat-o" size="24px" color="#33cb87" slot="left" dot></van-icon> -->
+</van-nav-bar>
+<van-toast id="van-toast" />
+<view class="userinfo">
+      <view class="userinfo-box">
+           <view class="userinfo-top">
+             <image class="avatar-image" src="{{avatar}}" mode="cover"></image>
+             <text class="avatar-nickname">{{nickName}}</text>
+          </view>
+          <view class="userinfo-bot">
+                <view class="userinfo-bot-left"><text class="block">我的打卡</text><text class="font-num">{{userClockInCount}}天</text></view>
+                <view class="userinfo-bot-right" bindtap="jumpEncourageList"><text class="block">收获鼓励</text><text class="font-num">{{encourageCount}}</text><text class="iconfont icon-zan"></text></view>
+          </view>
+      </view>
+</view>
+
+<view class="h-title">
+  <view class="h-tit-icon"></view>
+  <text class="h-tit-l">运动打卡</text>
+  <text class="h-tit-s">({{total}})</text>
+</view>
+
+<wxs src="../../utils/filter.wxs" module="filter" />
+<view wx:for="{{clockInList}}" wx:key="item" wx:for-index="clockIndex" class="item-box">
+    <view class="item-top">
+      <image class="avatar-image" src="{{item.avatar}}" mode="cover"></image>
+      <text class="avatar-nickname">{{item.realName}}</text>
+      <text class="item-time">{{filter.formatTime( item.createTime)}}</text>
+    </view>
+
+    <view class="item-cont">
+       <view class="item-even" wx:for="{{item.clockInDetails}}" wx:for-item="detail"  wx:key="detail">
+          <view class="item-mid-txt">运动类型：<text>{{detail.sportType}}</text></view>
+          <view class="item-mid-txt">运动时长：<text>{{detail.sportTime}}小时</text></view>
+          <view class="item-mid-txt">预估消耗卡路里：<text>{{detail.calorie}}</text></view>
+           <view wx:if="{{detail.imgUrl}}" class="item-image">
+               <image src="{{detail.imgUrl}}" mode="aspectFill"></image>
+           </view>
+       </view>
+
+          <view class="item-bot">
+              <view class="item-bot-right"><text class="iconfont icon-zan"></text><text class="font-num">{{item.encourageCount}}</text></view>
+          </view>
+    </view>
+
+</view>
+
+
+
+
+
+
