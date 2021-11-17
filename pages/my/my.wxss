@@ -1,0 +1,158 @@
+
+  page{
+    background:#f6f6f6;
+  }
+  .userinfo{
+    background:url(https://mmbiz.qpic.cn/mmbiz_png/veKlKVmOeIk8E8jB3jjrDzkjrytkGREOz8JXwic1oSEicFowsRiaLauqZiaia0QaKff1O4JabUp6wVdIPvKSVjQM7Eg/0?wx_fmt=png)#f5eeef no-repeat;
+    background-size:100%;
+    padding:80rpx 80rpx 30rpx 220rpx;
+  }
+  .userinfo-box{
+    background:#fff;
+    border-radius:20rpx;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    padding:20rpx 18rpx;
+  }
+  .userinfo-top{
+    border-bottom:1rpx solid #eee;
+    text-align:center;
+    padding-bottom:10rpx;
+    margin-bottom:10rpx;
+  }
+  .userinfo-top .avatar-image{
+    width:100rpx;
+    height:100rpx;
+    margin:-94rpx auto 0 auto;
+  }
+  .userinfo-top .avatar-nickname{
+    display:block;
+  }
+  .userinfo-bot{
+    color:#999;
+    display:flex;
+    font-size:28rpx;
+    width:100%;
+  }
+  .userinfo-bot-left, .userinfo-bot-right{
+    width:50%;
+    text-align:center;
+  }
+  .userinfo-bot-left{
+    border-right:1rpx solid #eee;
+  }
+  .h-title{
+    padding-top:40rpx;
+    display: flex;
+  }
+  .h-tit-icon{
+    background:#2bd982;
+    width:8rpx;
+    height:34rpx;
+    margin:8rpx 18rpx 0 20rpx;
+  }
+  .h-tit-l{
+    color:#34576a;
+    font-size:36rpx;
+    font-weight:600;
+    padding-right:30rpx;
+  }
+  .h-tit-s{
+    color:#999;
+    font-size:28rpx;
+    padding-top:4rpx;
+  }
+  .item-box{
+    background:#fff;
+    border-radius:20rpx;
+    margin:20rpx;
+    padding:20rpx 20rpx 20rpx 10rpx;
+  }
+  
+  .avatar-image{
+    width:80rpx;
+    height:80rpx;
+    border-radius:50%;
+    vertical-align: middle;
+    margin-right:10rpx;
+  }
+  .avatar-nickname{
+    color:#3e5e70;
+    font-size:32rpx;
+    font-weight:600;
+  }
+  .item-time{
+    color:#999;
+    font-size:28rpx;
+    float: right;
+    padding-top:24rpx;
+  }
+  .item-top{
+    border-bottom:1rpx solid #f7f7f7;
+    padding-bottom:14rpx;
+    margin-bottom:20rpx;
+  }
+  .item-cont{
+    padding-left:84rpx;
+  }
+  .item-cont-txt{
+    color:#333;
+  }
+  .item-image{
+    margin:20rpx 0;
+  }
+  .item-mid-txt{
+    font-size:28rpx;
+  }
+  .item-image image{
+    width:540rpx;
+  }
+  .item-bot{
+    color:#999;
+  }
+  .item-bot-right{
+    text-align:right;
+    padding-right:40rpx;
+  }
+  .item-bot .iconfont{
+    color:#33cb87;
+    font-size:42rpx;
+  }
+  .item-bot-left .iconfont{
+    padding-right:18rpx;
+  }
+.font-num{
+    color:#325669;
+    font-size:42rpx;
+    padding:0 4rpx;
+  }
+  .item-bot-right .iconfont{
+    padding:0 10rpx;
+  }
+  .item-bot-right .font-num{
+    color:#33cb87;
+    font-size:36rpx;
+  }
+.block{
+  display:block;
+}
+
+.userinfo-bot .font-num{
+  font-size:32rpx;
+  font-weight:600;
+}
+.userinfo-bot-right .icon-zan{
+  color:#f95a5f;
+  font-size:42rpx;
+  margin:6rpx;
+}
+.item-even:nth-child(2n){
+  background:#f8f8f8;
+  border-radius:10rpx;
+  padding:30rpx 10rpx 10rpx 40rpx;
+  margin:10rpx 20rpx 20rpx -40rpx;
+}
+  
+.item-even .item-image{
+ margin-right:0;
+}
+  
