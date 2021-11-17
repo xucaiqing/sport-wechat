@@ -1,0 +1,113 @@
+page{
+  background:#f6f6f6;
+}
+.stop{
+  color:#999;
+  font-size:30rpx;
+  padding:20rpx 0 20rpx 60rpx;
+}
+.sports-tit{
+  color:#525866;
+  font-size:32rpx;
+  text-align:center;
+  width:auto;
+  margin:0 auto;
+}
+.sports-box{
+  background:#fff;
+  border-radius: 20rpx;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  margin:20rpx 20rpx 40rpx 20rpx;
+  padding:10rpx 20rpx 20rpx 20rpx;
+}
+.sports-cont{
+  display: flex;
+}
+.sports-item{
+  margin:10rpx 10rpx 0 10rpx;
+  width:33%;
+  text-align:center;
+}
+.sports-icon{
+  border-radius:20rpx;
+  height:148rpx;
+  margin:10rpx 10rpx 0 10rpx;
+  padding:10rpx;
+}
+.sports-item text{
+   color:#525866;
+   font-size:24rpx;
+}
+
+.sports-item .van-radio__label{
+  color:#525866;
+  font-size:30rpx;
+}
+.icon-ymq{
+  background:url(https://mmbiz.qpic.cn/mmbiz_png/veKlKVmOeImm8Wic09F34zdafy4ibAjDCABicgNEwmKNbbL6Y2d2V2JaG6ApYZLMoAunampzlC5WJfWOibib3lf644A/0?wx_fmt=png) #c8e7e2 50% 50% no-repeat;
+  background-size:50%;
+}
+.icon-lq{
+  background:url(https://mmbiz.qpic.cn/mmbiz_png/veKlKVmOeImm8Wic09F34zdafy4ibAjDCAkHr29ToGHJk23YS5fIwgHoXgcwpYnY31Xw3oYGTTPiaAF9ANpnJlbpQ/0?wx_fmt=png) #c8e7e2 50% 50% no-repeat;
+  background-size:30%;
+}
+.icon-zq{
+  background:url(https://mmbiz.qpic.cn/mmbiz_png/veKlKVmOeImm8Wic09F34zdafy4ibAjDCACewwRj4x8obsedq4LVrAb1ae9Z0IbnFguFf5wJTSfw8z9LBlhEussA/0?wx_fmt=png) #c8e7e2 50% 50% no-repeat;
+  background-size:50%;
+}
+.icon-ppq{
+  background:url(https://mmbiz.qpic.cn/mmbiz_png/veKlKVmOeImm8Wic09F34zdafy4ibAjDCA82wcribMbDn8SSjKAB7PwXB32E1CgRn7aXol3OHY8z9HSyBTBXZOA0A/0?wx_fmt=png) #c8e7e2 50% 50% no-repeat;
+  background-size:36%;
+}
+.icon-wq{
+  background:url(https://mmbiz.qpic.cn/mmbiz_png/veKlKVmOeImm8Wic09F34zdafy4ibAjDCAx2KbRmNbYxnhYBvyQnZjIRiaxYtk7wxbocDkgWw1uMg6sgc4tnPsvzA/0?wx_fmt=png) #c8e7e2 50% 50% no-repeat;
+  background-size:80%;
+}
+.icon-bq{
+  background:url(https://mmbiz.qpic.cn/mmbiz_png/veKlKVmOeImm8Wic09F34zdafy4ibAjDCAz7aKHn7qteROpqbIRGgPXA2IfukZmKHIN7mgCRzyibGadr6LkruRQ6g/0?wx_fmt=png) #c8e7e2 50% 50% no-repeat;
+  background-size:45%; 
+}
+.icon-pb{
+  background:url(https://mmbiz.qpic.cn/mmbiz_png/veKlKVmOeImm8Wic09F34zdafy4ibAjDCAXiccGqYc2jaxaOwL9nBqeI9mJkfBYepLlmbZHveO9vg05M0rLYxrCNg/0?wx_fmt=png) #c8e7e2 50% 50% no-repeat;
+  background-size:55%; 
+}
+.icon-zl{
+  background:url(https://mmbiz.qpic.cn/mmbiz_png/veKlKVmOeImm8Wic09F34zdafy4ibAjDCAia4IUqiauuAS7jqibDITFRlFKTibUvEiciaQEWQZAFLn64SOyLKVGGR9rJibg/0?wx_fmt=png) #c8e7e2 50% 50% no-repeat;
+  background-size:46%; 
+}
+.icon-qx{
+  background:url(https://mmbiz.qpic.cn/mmbiz_png/veKlKVmOeImm8Wic09F34zdafy4ibAjDCA6O3CuXb0IwMfwicGTLOztXRR5WjBOXm6WkjctLj1QYZbSMwWiaiawz2nA/0?wx_fmt=png) #c8e7e2 50% 50% no-repeat;
+  background-size:80%; 
+}
+.icon-ds{
+  background:url(https://mmbiz.qpic.cn/mmbiz_png/veKlKVmOeImm8Wic09F34zdafy4ibAjDCAH7g7T8QYLAz1fVmHCMFRVRguYsmgts9qYxwKLj80ribUvicXOKEeDwuw/0?wx_fmt=png) #c8e7e2 50% 50% no-repeat;
+  background-size:35%; 
+}
+.icon-yj{
+  background:url(https://mmbiz.qpic.cn/mmbiz_png/veKlKVmOeImm8Wic09F34zdafy4ibAjDCAv4eALX4tKmQExn8yVkpo44icjOp9DGUsqTEy2ic5yvyibQScouSOibWZoA/0?wx_fmt=png) #c8e7e2 50% 50% no-repeat;
+  background-size:88%; 
+}
+.icon-yy{
+  background:url(https://mmbiz.qpic.cn/mmbiz_png/veKlKVmOeImm8Wic09F34zdafy4ibAjDCA6vHwm8L8bTkxPialHgOia3dyxUQzkDgMP1HZYvyJJqhtibibpxZR37HzPQ/0?wx_fmt=png) #c8e7e2 50% 50% no-repeat;
+  background-size:86%; 
+}
+.icon-js{
+  background:url(https://mmbiz.qpic.cn/mmbiz_png/veKlKVmOeImm8Wic09F34zdafy4ibAjDCAOeQ4O1zIwRwhLtCjdicCGKgMl4FZqhuqXP0Y1qmoexgrdEOQut1TJww/0?wx_fmt=png) #c8e7e2 50% 50% no-repeat;
+  background-size:60%; 
+}
+.icon-ts{
+  background:url(https://mmbiz.qpic.cn/mmbiz_png/veKlKVmOeImm8Wic09F34zdafy4ibAjDCAwfkL8m3frssKiahT47M08bnkibyCjTTicSgvYDnE3E2qxFCbzSkqLy9Mg/0?wx_fmt=png) #c8e7e2 50% 50% no-repeat;
+  background-size:50%; 
+}
+.icon-tc{
+  background:url(https://mmbiz.qpic.cn/mmbiz_png/veKlKVmOeImm8Wic09F34zdafy4ibAjDCAqoS6Sm1iauh6N2IzgkA7PFrnvBUtBhBuicdic2VqXY7Mm4picqlsoNibQoA/0?wx_fmt=png) #c8e7e2 50% 50% no-repeat;
+  background-size:70%; 
+}
+.icon-tqd{
+  background:url(https://mmbiz.qpic.cn/mmbiz_png/veKlKVmOeImm8Wic09F34zdafy4ibAjDCAZ2AEdmpx3jc2qDD9oVIols1nHjbr6QpKicFmd6aZaxMqWLaoAjvh4xg/0?wx_fmt=png) #c8e7e2 50% 50% no-repeat;
+  background-size:35%; 
+}
+.icon-other{
+  background:url(https://mmbiz.qpic.cn/mmbiz_png/veKlKVmOeInvUXLKtwQ3m3c9W772qbibHpHYBbNnbV5Qz5ojAuVa7CK72tfTEAAVruSdoWaSSAQ0T60ian7JdelQ/0?wx_fmt=png) #c8e7e2 50% 50% no-repeat;
+  background-size:70%;  
+}
