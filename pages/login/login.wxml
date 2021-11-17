@@ -1,0 +1,36 @@
+<!--index.wxml-->
+<van-toast id="van-toast" />
+<van-overlay show="{{showLoading}}">
+  <view class="wrapper">
+    <van-loading />
+  </view>
+</van-overlay>
+<view class="container">
+  <text>热风运动打卡小程序</text>
+  <image src="../../images/login-bg.gif"></image>
+  <view class="userinfo">
+    <block wx:if="{{!hasUserInfo}}">
+      <button wx:if="{{canIUseGetUserProfile}}" bindtap="getUserProfile"> 请点击授权 </button>
+      <!-- <button type="primary" wx:else="{{canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 请点击授权 </button> -->
+    </block>
+    <block wx:else>
+      <!-- <image bindtap="bindViewTap" class="userinfo-avatar" src="{{avatar}}" mode="cover"></image> -->
+      <!-- <text class="userinfo-nickname">{{realName}}</text> -->
+    </block>
+    <button wx:if="{{hasPhone}}" bindtap="jump"> 进入热动广场 </button>
+  </view>
+
+  <!-- <view class="usermotto">
+    <text class="user-motto">{{motto}}</text>
+  </view> -->
+  <block wx:if="{{(hasUserInfo)}}">
+  <button wx:if="{{!hasPhone}}" class="btn" type="primary" open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber">手机号登录</button>
+  <view wx:if="{{hasPhone && !hasTeam }}" class="picker">
+     <picker bindchange="bindPickerChange" value="{{objectArray[index].id}}" range="{{objectArray}}" range-key="teamName">
+        <view>
+          <text>选择团队：{{objectArray[index].teamName}}</text>
+        </view>
+    </picker>
+ </view>
+ </block>
+</view>
