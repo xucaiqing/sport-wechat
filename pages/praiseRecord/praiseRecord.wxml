@@ -1,0 +1,87 @@
+
+<van-nav-bar title="获赞记录" left-arrow bind:click-left="onClickLeft">
+  <!-- <van-icon name="chat-o" size="24px" color="#33cb87" slot="left" dot></van-icon> -->
+</van-nav-bar>
+<van-toast id="van-toast" />
+<view class="banner"></view>
+
+<view wx:for="{{encourageList}}" wx:key="item" class="item-list">
+  <view class="item-list-image"><image class="avatar-image" src="{{item.avatar}}" mode="cover"></image></view>
+  <view class="item-list-mid">
+      <text class="avatar-nickname">{{item.name}}</text>
+      <text class="item-time">{{item.createTime}}</text>
+  </view>
+  <!-- 
+  <view wx:if="{{item.sportType == ''}}"  class="sports-item">
+      <view class="sports-icon icon-other"></view>
+  </view> -->
+  <view  wx:if="{{item.sportType == '羽毛球'}}" class="sports-item">
+            <view class="sports-icon icon-ymq"></view>
+            <!-- <text>羽毛球</text> -->
+  </view>
+  <view wx:if="{{item.sportType == '篮球'}}"  class="sports-item">
+        <view class="sports-icon icon-lq"></view>
+        <!-- <text>篮球</text> -->
+  </view>
+  <view wx:if="{{item.sportType == '足球'}}" class="sports-item">
+        <view class="sports-icon icon-zq"></view>
+        <!-- <text>足球</text> -->
+  </view>
+  <view wx:if="{{item.sportType == '乒乓球'}}" class="sports-item">
+            <view class="sports-icon icon-ppq"></view>
+            <!-- <text>乒乓球</text> -->
+  </view>
+  <view wx:if="{{item.sportType == '网球'}}" class="sports-item">
+        <view class="sports-icon icon-wq"></view>
+        <!-- <text>网球</text> -->
+  </view>
+  <view wx:if="{{item.sportType == '其他球类'}}" class="sports-item">
+        <view class="sports-icon icon-bq"></view>
+        <!-- <text>其他球类</text> -->
+  </view> 
+  <view wx:if="{{item.sportType == '跑步'}}" class="sports-item">
+        <view class="sports-icon icon-pb"></view>
+            <!-- <text>跑步</text> -->
+  </view>
+  <view wx:if="{{item.sportType == '走路'}}" class="sports-item">
+        <view class="sports-icon icon-zl" checked-color="#33cb87"></view>
+        <!-- <text>走路</text> -->
+  </view>
+  <view wx:if="{{item.sportType == '骑行'}}" class="sports-item">
+        <view class="sports-icon icon-qx"></view>
+        <!-- <text>骑行</text> -->
+  </view>
+  <view wx:if="{{item.sportType == '登山'}}"  class="sports-item">
+        <view class="sports-icon icon-ds"></view>
+        <!-- <text>登山</text> -->
+  </view>
+  <view wx:if="{{item.sportType == '瑜伽'}}"   class="sports-item">
+        <view class="sports-icon icon-yj"></view>
+        <!-- <text>瑜伽</text> -->
+  </view>
+  <view wx:if="{{item.sportType == '游泳'}}"  class="sports-item">
+        <view class="sports-icon icon-yy"></view>
+        <!-- <text>游泳</text> -->
+  </view>
+  <view wx:if="{{item.sportType == '健身器械'}}"  class="sports-item">
+        <view class="sports-icon icon-js"></view>
+        <!-- <text>健身器械</text> -->
+  </view>
+  <view wx:if="{{item.sportType == '跳绳'}}"  class="sports-item">
+        <view class="sports-icon icon-ts"></view>
+        <!-- <text>跳绳</text> -->
+  </view>
+  <view  wx:if="{{item.sportType == '健美操'}}" class="sports-item">
+        <view class="sports-icon icon-tc"></view>
+        <!-- <text>健美操</text> -->
+  </view>
+  <view wx:if="{{item.sportType == '跆拳道'}}"  class="sports-item">
+        <view class="sports-icon icon-tqd"></view>
+        <!-- <text>跆拳道</text> -->
+  </view>
+  <view wx:if="{{item.sportType == '其它运动'}}"  class="sports-item">
+        <view class="sports-icon icon-other"></view>
+        <!-- <text>其它运动</text> -->
+  </view>
+</view>
+
