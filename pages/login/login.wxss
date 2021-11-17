@@ -1,0 +1,47 @@
+/**index.wxss**/
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #aaa;
+}
+
+.userinfo-avatar {
+  overflow: hidden;
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+.usermotto {
+  color:#999;
+  font-size:28rpx;
+  margin-top: 200rpx;
+  margin-bottom:20rpx;
+}
+.userinfo button{
+  border:2rpx solid #33cb87;
+  background:none;
+  border-radius: 40rpx;
+  color:#33cb87;
+}
+.container button[type=primary] {
+  background:#33cb87;
+  border-radius: 40rpx;
+  font-size:36rpx;
+  font-weight:400;
+  margin-top:40rpx;
+  width:60%;
+}
+
+.picker{
+  background:#fafafa;
+  margin-top:40rpx;
+  padding:16rpx 30rpx;
+}
