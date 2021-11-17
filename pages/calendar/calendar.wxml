@@ -1,0 +1,100 @@
+
+<van-nav-bar title="打卡日历">
+  <!-- <van-icon name="chat-o" size="24px" color="#33cb87" slot="left" dot></van-icon> -->
+</van-nav-bar>
+<van-toast id="van-toast" />
+<view class="top-box">
+   <view class="top-left">本月剩余补打卡次数：<text>{{supplementTimes}}次</text></view>
+   <view class="top-month"><text>{{cur_month}}月</text></view>
+   <view class="top-calendar"></view>
+</view>
+
+<view class="banner"></view>
+
+<view class="calendar-box">
+
+  <!-- <van-calendar
+  title=""
+  poppable="{{ false }}"
+  show-confirm="{{ false }}"
+  class="calendar">
+  </van-calendar> -->
+  
+<view class='all'>
+<view class="bar">
+<!-- 上一个月 -->
+<view class="previous" bindtap="handleCalendar" data-handle="prev">
+  <van-icon name="arrow-left" />
+</view>
+<!-- 显示年月 -->
+<view class="date">{{cur_year || "--"}} 年 {{cur_month || "--"}} 月</view>
+<!-- 下一个月 -->
+<view class="next" bindtap="handleCalendar" data-handle="next">
+  <van-icon name="arrow" />
+</view>
+</view>
+
+<!-- 显示星期 -->
+<view class="week">
+  <view wx:for="{{weeks_ch}}" wx:key="{{index}}" data-idx="{{index}}">{{item}}</view>
+</view>
+<view class='days'>
+<!-- 列 -->
+<view class="columns" wx:for="{{days.length/7}}" wx:for-index="i" wx:key="i">
+<view wx:for="{{days}}" wx:for-index="j" wx:key="j">
+<!-- 行 -->
+<view class="rows" wx:if="{{j/7 == i}}">
+<view class="rows" wx:for="{{7}}" wx:for-index="k" wx:key="k">
+<!-- 每个月份的空的单元格 -->
+<view class='cell' wx:if="{{days[j+k].date == null}}">
+<text decode="{{true}}">  </text>
+</view>
+<!-- 每个月份的有数字的单元格 -->
+<view class='cell' wx:else style="background:#f0f0f0;">
+<!-- 当前日期已签到 -->
+<view wx:if="{{days[j+k].sign == 1}}" class='csigned' bindtap="jumpClockRecord" data-day="{{days[j+k]}}">
+<text>{{days[j+k].date}}</text>
+</view>
+<view wx:if="{{days[j+k].sign == 2}}" class='extraSigned' bindtap="jumpClockRecord" data-day="{{days[j+k]}}">
+<text>{{days[j+k].date}}</text>
+</view>
+<!-- 当前日期未签到 -->
+<view  wx:if="{{days[j+k].sign == 0}}" bindtap="extra" data-day="{{days[j+k]}}">
+<text>{{days[j+k].date}}</text>
+</view>
+</view>
+</view>
+</view>
+</view>
+</view>
+</view>
+<!-- 坚持打卡天数 -->
+<!-- <view class='count'>
+  <text>截至目前，你已坚持打卡</text>
+  <view class='daynumber'>
+     <text class='number'>{{count}}</text>
+     <text class='day'>天</text>
+  </view>
+  <text>请再接再厉，继续努力</text>
+</view>   -->
+</view>
+</view>
+
+<view class="tag">
+<view class="tag-item">
+   <view class="tag-green"></view>打卡
+</view>
+<view class="tag-item">
+  <view class="tag-yellow"></view>补打卡
+</view>
+<view class="tag-item"> 
+   <view class="tag-gray"></view>未打卡
+</view>
+</view>
+
+<view class="note">
+  <view>温馨提示：</view>
+  <view>1.点击日历中已打卡的日期，可以浏览当天打卡的内容。</view>
+  <view>2.在当前月份内，有三次补打卡记录。从当月的历史未打卡记录中，
+点进去，在三次机会用完前，可以补打卡。</view>
+</view>
