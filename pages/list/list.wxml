@@ -1,0 +1,100 @@
+<van-nav-bar title="排行榜">
+  <!-- <van-icon name="chat-o" size="24px" color="#33cb87" slot="left" dot></van-icon> -->
+</van-nav-bar>
+<van-toast id="van-toast" />
+<!-- <view class="mask" catchtouchmove="preventTouchMove" wx:if="{{showLoading}}"></view>
+<view class="wrapper" wx:if="{{showModal}}">
+    <van-loading />
+</view> -->
+<!-- <van-overlay show="{{showLoading}}" bind:click="hideLoading">
+  <view class="wrapper">
+    <van-loading />
+  </view>
+</van-overlay> -->
+<view class="swiper-tab">
+    <view class="swiper-tab-list {{currentTab==0 ? 'on' : ''}}" data-current="0" bindtap="swichNav">个人榜</view>
+    <view class="swiper-tab-list {{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="swichNav">团队榜</view>
+</view>
+
+<swiper current="{{currentTab}}" class="swiper-box" duration="300" style="height:{{winHeight + 1000}}px" bindchange="bindChange">
+<!-- 个人榜 start -->
+<swiper-item>
+    <view class="swiper-tabs">
+    <van-tabs type="card" color="#1ac388" active="{{ currentState}}" bind:change="changeTime" ellipsis="true" animated swipeable sticky>
+      <block  wx:for="{{menuList}}" wx:key="id" wx:for-item="itemMenu">
+      <van-tab title="{{itemMenu.menuName}}" name="{{itemMenu.id}}" >
+      <view class="swiper-items-tit">
+            <view>仅显示前100名</view>
+            <view wx:if="{{itemMenu.menuName!=='今日排行'}}" class='wd02 {{num==5?"active":""}}' data-num='5' bindtap="mySort" data-property="totalDays">累计天数</view>
+            <view class='wd01 {{num==2?"active":""}}' data-num='2' bindtap="mySort" data-property="sport_time"><text class="iconfont icon-shijianpaixu"></text>时长</view>
+            <view style="margin-top:-6rpx" class='wd01 {{num==3?"active":""}}' data-num='3' bindtap="mySort" data-property="stepNum"><text class="iconfont icon-yundongbisai"></text>步数</view>
+            <view class='wd02 {{num==4?"active":""}}' data-num='4' bindtap="mySort" data-property="encourageCount"><text class="iconfont icon-paixuzan"></text>鼓励数</view>
+      </view>
+      <view class="swiper-items-cont">
+            <view class="swiper-items-mylist">
+               <view>我的排名</view>
+               <view>NO.{{myRank == null? '-': myRank}}</view>
+               <view wx:if="{{num==4}}"><text>{{encourageCount == null? '-': encourageCount}}</text><text class="iconfont icon-zan"></text></view>
+               <view wx:if="{{num==3}}"><text>{{stepNum == null? '-': stepNum}} 步</text></view>
+               <view wx:if="{{num==2}}"><text>{{sportTime == null? '-': sportTime}} 小时</text></view>
+               <view wx:if="{{num==5}}"><text>{{totalDays == null? '-': totalDays}} 天</text></view>
+            </view>
+     <block wx:for="{{dataList}}" wx:key="item">
+            <view class="swiper-items-list" wx:for-index="index" wx:if="{{index<100}}">
+               <view>
+                  <image src="/images/rank{{item.rank}}.png" wx:if="{{item.rank<=3}}" mode="scaleToFill"></image>
+                  <text wx:if="{{item.rank>3}}">{{item.rank}}</text>
+               </view>
+               <view><image class="avatar-image" src="{{item.avatar}}" mode="cover"></image></view>
+               <view><text class="avatar-nickname">{{item.realName}}</text></view>
+               <view class='w-last {{num==5?"show":"hidden"}}' data-property="totalDays">{{item.totalDays}} 天</view>
+               <view class='w-last {{num==2?"show":"hidden"}}' data-property="sport_time">{{item.sportTime}} 小时</view>
+               <view class='w-last {{num==3?"show":"hidden"}}' data-property="stepNum">{{item.stepNum}} 步</view>
+               <view class='w-last {{num==4?"show":"hidden"}}' data-property="encourageCount"><text>{{item.encourageCount}}</text><text class="iconfont icon-zan"></text></view>
+            </view>
+    </block>
+      </view>
+       </van-tab>
+    </block>
+</van-tabs>
+</view>
+</swiper-item><!-- 个人榜 end -->
+
+<swiper-item>
+  <view class="swiper-tabs">
+    <van-tabs type="card" color="#1ac388" active="{{ currentState }}" bind:change="changeTime" ellipsis="true" animated swipeable sticky>
+      <block  wx:for="{{menuList}}" wx:key="id" wx:for-item="itemMenu">
+      <van-tab title="{{itemMenu.menuName}}" name="{{itemMenu.id}}">
+      <view class="swiper-items-tit">
+            <view>仅显示前100名</view>
+            <view wx:if="{{itemMenu.menuName!=='今日排行'}}" class='wd02 {{num==5?"active":""}}' data-num='5' bindtap="mySort" data-property="totalDays">累计天数</view>
+            <view class='wd01 {{num==2?"active":""}}' data-num='2' bindtap="mySort" data-property="sport_time"><text class="iconfont icon-shijianpaixu"></text>时长</view>
+            <view style="margin-top:-6rpx;" class='wd01 {{num==3?"active":""}}' data-num='3' bindtap="mySort" data-property="stepNum"><text class="iconfont icon-yundongbisai"></text>步数</view>
+            <view class='wd02 {{num==4?"active":""}}' data-num='4' bindtap="mySort" data-property="encourageCount"><text class="iconfont icon-paixuzan"></text>鼓励数</view>
+      </view>
+      <view class="swiper-items-cont">
+     <block wx:for="{{dataList}}" wx:key="item">
+            <view class="swiper-items-list" wx:for-index="index" wx:if="{{index<100}}">
+               <view>
+                  <image src="/images/rank{{item.rank}}.png" wx:if="{{item.rank<=3}}" mode="scaleToFill"></image>
+                  <text wx:if="{{item.rank>3}}">{{item.rank}}</text>
+               </view>
+               <view class="w-team"><text class="avatar-nickname">{{item.teamName}}</text></view>
+               <view class='w-last {{num==5?"show":"hidden"}}' data-property="totalDays">{{item.totalDays}} 天</view>
+               <view class='w-last {{num==2?"show":"hidden"}}' data-property="sport_time">{{item.sportTime}} 小时</view>
+               <view class='w-last {{num==3?"show":"hidden"}}' data-property="stepNum">{{item.stepNum}} 步</view>
+               <view class='w-last {{num==4?"show":"hidden"}}' data-property="encourageCount"><text>{{item.encourageCount}}</text><text class="iconfont icon-zan"></text></view>
+            </view>
+    </block>
+      </view>
+       </van-tab>
+    </block>
+</van-tabs>
+</view>
+</swiper-item>
+
+</swiper>
+
+
+
+
