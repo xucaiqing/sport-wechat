@@ -1,0 +1,25 @@
+/**app.wxss**/
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 200rpx 0;
+  box-sizing: border-box;
+} 
+
+.btn-cont button[type=primary] {
+  background:#33cb87;
+  border-radius: 40rpx;
+  font-size:32rpx;
+  font-weight:400;
+  width:60%;
+}
+ button[disabled]{
+  background: #bbb !important;
+  border-color: #bbb !important;
+  color:#fff !important;
+}
+
+@import'./styles/iconfont.wxss'

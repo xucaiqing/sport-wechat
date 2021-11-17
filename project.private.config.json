@@ -1,0 +1,54 @@
+{
+  "setting": {},
+  "condition": {
+    "plugin": {
+      "list": []
+    },
+    "game": {
+      "list": []
+    },
+    "gamePlugin": {
+      "list": []
+    },
+    "miniprogram": {
+      "list": [
+        {
+          "name": "pages/index/index",
+          "pathName": "pages/index/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/praiseRecord/praiseRecord",
+          "pathName": "pages/praiseRecord/praiseRecord",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/sports/sports",
+          "pathName": "pages/sports/sports",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/sportsType/sportsType",
+          "pathName": "pages/sportsType/sportsType",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/list/list",
+          "pathName": "pages/list/list",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/clockRecord/clockRecord",
+          "pathName": "pages/clockRecord/clockRecord",
+          "query": "",
+          "scene": null
+        }
+      ]
+    }
+  }
+}

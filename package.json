@@ -1,0 +1,19 @@
+{
+  "name": "hw-sport-wechat-miniappa",
+  "version": "1.0.0",
+  "main": "app.js",
+  "dependencies": {
+    "@vant/weapp": "^1.9.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git@gitlab.ihotwind.cn:hw-wxwork/hw-sport-wechat-miniapp.git"
+  },
+  "description": ""
+}
