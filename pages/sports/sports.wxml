@@ -1,0 +1,43 @@
+
+<van-nav-bar title="运动打卡" left-arrow bind:click-left="onClickLeft">
+  <!-- <van-icon name="chat-o" size="24px" color="#33cb87" slot="left" dot></van-icon> -->
+</van-nav-bar>
+<van-toast id="van-toast" />
+
+<van-cell-group class="sports-form">
+  <!-- <van-field
+    value=""
+    label="打卡日期"
+    readonly
+  ></van-field> -->
+<wxs src="../../utils/filter.wxs" module="filter" />
+<view class="h-items text-first">
+  <label>打卡日期</label>
+  <text>{{createTime}}</text>
+</view>
+<view class="h-items">
+  <label><text>*</text>运动时长</label>
+  <van-dropdown-menu >
+     <van-dropdown-item value="{{ value1 }}" bind:change="optionChange" options="{{ option1 }}" />
+  </van-dropdown-menu>
+</view>
+  <van-field
+    value="{{calorie}}大卡"
+    label="消耗卡路里"
+    readonly
+  />
+</van-cell-group>
+
+<view class="upload">
+  <text>上传图片(选填，最多1张)</text>
+  <van-uploader preview-size="120" file-list="{{ fileList }}" max-count='1' bind:after-read="afterRead" deletable="{{ true }}" bind:delete="delImgs"/>
+</view>
+
+
+<view class="btn-cont">
+   <!-- <button wx:if="{{todayIsClockIn === 0}}" type="primary" bindtap="bindViewTap">立即打卡</button> -->
+   <!-- <button wx:else type="primary" disabled="true">立即打卡</button> -->
+   <button type="primary" bindtap="bindViewTap" disabled="{{canSumbit}}">立即打卡</button>
+</view>
+
+<van-toast id="van-toast" />
