@@ -1,0 +1,84 @@
+.h-title{
+  padding-top:40rpx;
+  display: flex;
+}
+.h-tit-icon{
+  background:#2bd982;
+  width:8rpx;
+  height:34rpx;
+  margin:8rpx 18rpx 0 20rpx;
+}
+.h-tit-l{
+  color:#34576a;
+  font-size:36rpx;
+  font-weight:600;
+  padding-right:30rpx;
+}
+.h-tit-s{
+  color:#999;
+  font-size:28rpx;
+  padding-top:4rpx;
+}
+.item-box{
+  background:#fff;
+  border-radius:20rpx;
+  margin:20rpx;
+  padding:20rpx 20rpx 20rpx 10rpx;
+}
+
+.avatar-image{
+  width:80rpx;
+  height:80rpx;
+  border-radius:50%;
+  vertical-align: middle;
+  margin-right:10rpx;
+}
+.avatar-nickname{
+  color:#3e5e70;
+  font-size:32rpx;
+  font-weight:600;
+}
+.item-time{
+  color:#999;
+  font-size:28rpx;
+  float: right;
+  padding-top:20rpx;
+}
+.item-top{
+  border-bottom:1rpx solid #f7f7f7;
+  padding-bottom:14rpx;
+  margin-bottom:20rpx;
+}
+.item-cont{
+  padding-left:84rpx;
+}
+.item-cont-txt{
+  color:#333;
+}
+.item-mid-txt{
+  font-size:28rpx;
+}
+.item-image{
+  margin:20rpx 0;
+}
+
+.item-image image{
+  width:540rpx;
+}
+
+.item-even:nth-child(2n){
+  background:#f8f8f8;
+  border-radius:10rpx;
+  padding:30rpx 10rpx 10rpx 40rpx;
+  margin:10rpx 20rpx 20rpx -40rpx;
+}
+  
+.item-even .item-image{
+ margin-right:0;
+}
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
